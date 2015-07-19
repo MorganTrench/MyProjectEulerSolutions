@@ -26,3 +26,6 @@
 *.exe
 *.out
 *.app
+
+# File System stuff
+.DS_Store

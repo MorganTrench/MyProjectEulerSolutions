@@ -1,4 +1,5 @@
 #include <iostream>
+// For an Argument of 10000 the correct result is 233168
 
 int main(int argc, char *argv[]){
 
@@ -9,15 +10,21 @@ int main(int argc, char *argv[]){
     }
 
 	// Initialise Variables
-	int i = 3, sum = 0, limit = atoi(argv[1]);
+	int i, sum = 0, limit = atoi(argv[1]);
 
-	// Add multiples of 3 and 5 less than the limit to the sum
+	// Add multiples of 3 until it hits the limit
+	i = 3;
 	while (i < limit){
-		// Test if multiple of 3 or 5, if so add it to sum
-		if ((i % 3 == 0) || (i % 5 == 0))
+		sum += i;
+		i += 3;
+	}
+
+	// Add multiples of 5 that arent also multiples of 3 until it hits the limit
+	i = 5;
+	while (i < limit){
+		if (i % 3 != 0)
 			sum += i;
-		// Increment
-		i += 1;
+		i += 5;
 	}
 
 	std::cout << sum << std::endl;
