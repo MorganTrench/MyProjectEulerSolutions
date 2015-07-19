@@ -1,11 +1,11 @@
 #include <iostream>
-// For an Argument of 10000 the correct result is 233168
 
 int main(int argc, char *argv[]){
 
-	// Parse Arguments
+	// Check Arguments
 	if ( argc != 2 ){
 		std::cout << "usage: ./p1.out limit" << std::endl;
+		// Error
 		return -1;
     }
 
@@ -27,6 +27,7 @@ int main(int argc, char *argv[]){
 		i += 5;
 	}
 
+	// Print Result
 	std::cout << sum << std::endl;
 
 	// Terminate Successfully
